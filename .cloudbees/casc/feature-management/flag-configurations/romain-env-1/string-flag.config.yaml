@@ -9,7 +9,7 @@ enabled: true
 stickinessProperty: rox.distinct_id
 
 defaultValue:
-  valueWrittenInCode: false
+  valueWrittenInCode: true
 
 conditions:
   - allOf:
@@ -17,4 +17,4 @@ conditions:
           name: booleanFlagRomain
           value: "true"
     flagValue:
-      valueWrittenInCode: false
+      valueWrittenInCode: true

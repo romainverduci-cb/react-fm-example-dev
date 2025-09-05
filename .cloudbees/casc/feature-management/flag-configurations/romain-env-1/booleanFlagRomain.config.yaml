@@ -1,0 +1,27 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: booleanFlagRomain
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue: false
+
+conditions:
+  - allOf:
+      - property:
+          name: string-prop
+          operator: ne
+          operands:
+            - '    a sdasdasd.       '
+    flagValue: false
+  - allOf:
+      - property:
+          name: rox.screen_width
+          operator: eq
+          operands:
+            - 123
+    flagValue: true

@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: tg-number-prop
+
+description: 
+
+conditions:
+  allOf:
+    - property:
+        name: number-prop
+        operator: eq
+        operands:
+            - 123//,

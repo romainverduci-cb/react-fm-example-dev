@@ -1,0 +1,20 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: string-flag
+
+enabled: true
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - flag:
+          name: booleanFlagRomain
+          value: "true"
+    flagValue:
+      valueWrittenInCode: true

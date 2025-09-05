@@ -1,0 +1,14 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: romapp-flag-1
+flagType: boolean
+description: sasasas
+labels:
+
+availableValues:
+  - true
+  - false
+
+isPermanent: false

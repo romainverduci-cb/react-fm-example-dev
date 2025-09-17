@@ -6,6 +6,7 @@ flag: number-flag
 flagType: number
 description: 
 labels:
+  - label2
 
 availableValues:
   - 456

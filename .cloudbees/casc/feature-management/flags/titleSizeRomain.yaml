@@ -6,6 +6,7 @@ flag: titleSizeRomain
 flagType: number
 description: 
 labels:
+  - label3
 
 availableValues:
   - 14

@@ -4,7 +4,7 @@ kind: target-group
 
 name: tg-t
 
-description: 
+description: a
 
 conditions:
   allOf:

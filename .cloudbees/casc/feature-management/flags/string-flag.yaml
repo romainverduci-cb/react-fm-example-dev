@@ -4,7 +4,7 @@ kind: flag
 
 flag: string-flag
 flagType: string
-description: 
+description: adding some description
 labels:
   - label1:teamA
 

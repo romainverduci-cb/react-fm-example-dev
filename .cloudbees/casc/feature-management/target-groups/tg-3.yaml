@@ -12,4 +12,4 @@ conditions:
         name: rox.screen_width
         operator: eq
         operands:
-            - 123
+            - "1234"

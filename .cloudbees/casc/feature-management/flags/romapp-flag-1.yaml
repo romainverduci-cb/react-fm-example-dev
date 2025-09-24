@@ -4,7 +4,7 @@ kind: flag
 
 flag: romapp-flag-1
 flagType: boolean
-description: sasasas
+description: sasasasasdasd
 labels:
 
 availableValues:

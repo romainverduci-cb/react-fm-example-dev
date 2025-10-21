@@ -30,18 +30,18 @@ const Layout = () => (
 )
 
 function App() {
+  // Call all hooks at the top level
+  const homeFlag = useFeatureFlag(namespaceFlags.routes.home)
+  const aboutFlag = useFeatureFlag(namespaceFlags.routes.about)
+
+  const routeFlags = [homeFlag, aboutFlag]
+
   return (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
           {customRoutes.map((route, index) => {
-            const routeFlag = route.featureFlag
-              ? useFeatureFlag(
-                  namespaceFlags[route.featureFlag.namespace][
-                    route.featureFlag.flag
-                  ]
-                )
-              : true
+            const routeFlag = route.featureFlag ? routeFlags[index] : true
             return routeFlag ? (
               <Route
                 key={index}

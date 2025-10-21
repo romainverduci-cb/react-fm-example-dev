@@ -5,14 +5,14 @@ import { customRoutes } from './App'
 import { namespaceFlags } from './feature-management/flags'
 
 export const Nav = () => {
-  const enabledRoutes = customRoutes.filter((route) => {
-    const routeFlag = route.featureFlag
-      ? useFeatureFlag(
-          namespaceFlags[route.featureFlag.namespace][route.featureFlag.flag]
-        )
-      : true
-    return routeFlag
-  })
+  const homeFlag = useFeatureFlag(namespaceFlags.routes.home)
+  const aboutFlag = useFeatureFlag(namespaceFlags.routes.about)
+
+  const routeFlags = [homeFlag, aboutFlag]
+
+  const enabledRoutes = customRoutes.filter((route, index) =>
+    route.featureFlag ? routeFlags[index] : true
+  )
 
   return (
     <nav>

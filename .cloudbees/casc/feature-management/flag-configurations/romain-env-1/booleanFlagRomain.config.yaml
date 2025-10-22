@@ -13,15 +13,18 @@ defaultValue: false
 conditions:
   - allOf:
       - property:
-          name: string-prop
-          operator: ne
-          operands:
-            - '    a sdasdasd.       '
-    flagValue: false
-  - allOf:
-      - property:
           name: rox.screen_width
           operator: eq
           operands:
             - 123
     flagValue: true
+  - allOf:
+      - flag:
+          name: enableTutorialRomain
+          value: "false"
+    flagValue: false
+  - allOf:
+      - anyOf:
+          - group:
+              name: t
+    flagValue: false

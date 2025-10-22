@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/react-fm-example/',
+  base: '/react-fm-example-dev/',
 })

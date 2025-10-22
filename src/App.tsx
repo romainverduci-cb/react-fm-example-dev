@@ -8,7 +8,7 @@ import { namespaceFlags } from './feature-management/flags.ts'
 
 export const customRoutes = [
   {
-    path: '/react-fm-example',
+    path: '/react-fm-example-dev',
     label: 'Home',
     element: <Home />,
     index: true,
@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/react-fm-example" element={<Layout />}>
+        <Route path="/react-fm-example-dev" element={<Layout />}>
           {customRoutes.map((route, index) => {
             const routeFlag = route.featureFlag ? routeFlags[index] : true
             return routeFlag ? (
